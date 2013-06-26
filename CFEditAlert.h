@@ -6,6 +6,10 @@
 
 #import <UIKit/UIKit.h>
 
+@interface NSArray (reversed)
+- (NSArray *)reversedArray;
+@end
+
 @interface CFEditAlert : UIAlertView {
     NSArray *colorSlides;
     UISlider *r;

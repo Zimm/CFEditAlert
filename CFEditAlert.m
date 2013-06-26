@@ -7,6 +7,19 @@
 #import "CFEditAlert.h"
 #include <stdarg.h>
 
+@implementation NSArray (Reverse)
+
+- (NSArray *)reversedArray {
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:[self count]];
+    NSEnumerator *enumerator = [self reverseObjectEnumerator];
+    for (id element in enumerator) {
+        [array addObject:element];
+    }
+    return array;
+}
+
+@end
+
 @implementation CFEditAlert
 @dynamic color;
 
